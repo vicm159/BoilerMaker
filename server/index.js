@@ -21,6 +21,10 @@ app.use(express.static(path.join(__dirname, '../public')));
 
 // configure and create our database store
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
+// Uses the Sessions table i defined sessions.js file On a side note
+// I noticed I did not have to include the postgres schema for this to
+// work am wondering what would happen if we had a Sessions table in
+// the public schema
 const dbStore = new SequelizeStore({ db: db, table: 'Sessions' });
 
 // sessions middleware

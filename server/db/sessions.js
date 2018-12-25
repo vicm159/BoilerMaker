@@ -1,6 +1,7 @@
 const db = require('./database');
 const Sequelize = require('sequelize');
 
+// created my own sessions table where you can vary the postgres schema
 const Sessions = db.define(
   'Sessions',
   {
@@ -19,7 +20,7 @@ const Sessions = db.define(
     },
   },
   {
-    schema: 'test',
+    schema: 'test', // Can change schema to whatever you want
   }
 );
 

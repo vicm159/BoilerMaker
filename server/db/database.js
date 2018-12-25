@@ -11,6 +11,7 @@ if (process.env.NODE_ENV !== 'production') {
 //   }
 // );
 
+// uses home Ubuntu Server for database
 const db = new Sequelize(
   'victorfullstack',
   process.env.POSTGRES_USER,
